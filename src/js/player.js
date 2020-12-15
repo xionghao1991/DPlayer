@@ -5,7 +5,7 @@ import handleOption from './options';
 import i18n from './i18n';
 import Template from './template';
 import Icons from './icons';
-import Danmaku from './danmaku';
+// import Danmaku from './danmaku';
 import Events from './events';
 import FullScreen from './fullscreen';
 import User from './user';
@@ -44,9 +44,9 @@ class DPlayer {
         this.container = this.options.container;
 
         this.container.classList.add('dplayer');
-        if (!this.options.danmaku) {
-            this.container.classList.add('dplayer-no-danmaku');
-        }
+        // if (!this.options.danmaku) {
+        //     this.container.classList.add('dplayer-no-danmaku');
+        // }
         if (this.options.live) {
             this.container.classList.add('dplayer-live');
         } else {

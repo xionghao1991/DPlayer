@@ -3,7 +3,9 @@
     "version": "1.26.0",
     "description": "Wow, such a lovely HTML5 danmaku video player",
     "main": "dist/DPlayer.min.js",
+    "module": "src/js/index.js",
     "scripts": {
+        "build:esm": "rollup --config rollup/rollup.config.js",
         "start": "npm run dev",
         "build": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js --progress --display-error-details --colors",
         "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack/dev.config.js --watch --colors",
@@ -27,9 +29,6 @@
         "video",
         "html5"
     ],
-    "gitHooks": {
-        "pre-commit": "npm run format:staged"
-    },
     "author": "DIYgod",
     "license": "MIT",
     "bugs": {
@@ -39,6 +38,11 @@
     "devDependencies": {
         "@babel/core": "^7.6.0",
         "@babel/preset-env": "^7.4.5",
+        "@rollup/plugin-babel": "^5.2.2",
+        "@rollup/plugin-commonjs": "^17.0.0",
+        "@rollup/plugin-image": "^2.0.5",
+        "@rollup/plugin-node-resolve": "^11.0.0",
+        "@rollup/pluginutils": "^4.1.0",
         "@vuepress/plugin-back-to-top": "1.7.1",
         "@vuepress/plugin-google-analytics": "1.7.1",
         "@vuepress/plugin-pwa": "1.7.1",
@@ -62,6 +66,7 @@
         "prettier": "^2.0.4",
         "prettier-check": "^2.0.0",
         "pretty-quick": "^3.0.0",
+        "rollup": "^2.35.1",
         "sass-loader": "^10.0.0",
         "strip-loader": "^0.1.2",
         "style-loader": "^2.0.0",
