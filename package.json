@@ -16,12 +16,17 @@
         "docs:dev": "vuepress dev docs",
         "docs:build": "vuepress build docs"
     },
+    "types": "types/index.d.ts",
     "files": [
-        "dist"
+        "dist",
+        "types/index.d.ts"
     ],
     "repository": {
         "url": "git+https://github.com/DIYgod/DPlayer.git",
         "type": "git"
+    },
+    "publishConfig": {
+        "registry": "http://10.18.7.53:4873"
     },
     "keywords": [
         "player",
