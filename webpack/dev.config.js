@@ -33,6 +33,23 @@ module.exports = {
         strictExportPresence: true,
         rules: [
             {
+                test: path.resolve(__dirname, '..', 'src/js/index.js'),
+                use: [
+                    {
+                        loader: "wrap-loader",
+                        options: {
+                            before: [`import '../css/index.scss';`],
+//                             after: [`var oldC = window.C;
+// exports.noConflict = function() {
+// 	window.C = oldC;
+// 	return this;
+// }
+// window.C = exports;`]
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.js$/,
                 use: [
                     {
@@ -76,7 +93,7 @@ module.exports = {
             },
             {
                 test: /\.art$/,
-                loader: 'art-template-loader',
+                use: path.resolve(__dirname, './art-template-loader.js')
             },
         ],
     },
