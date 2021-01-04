@@ -4,7 +4,7 @@ import image from '@rollup/plugin-image';
 import babel from '@rollup/plugin-babel';
 import artTemplate from '../rollup-art-template/index';
 export default {
-    input: 'demo/test.js',
+    input: 'src/js/index.js',
     plugins: [
         image(),
         babel(
@@ -15,7 +15,7 @@ export default {
         commonjs() // so Rollup can convert `ms` to an ES module
     ],
     output: {
-        file: 'dist/main.js',
+        file: 'dist/DPlayer.esm.js',
         format: 'esm',
     },
 };
