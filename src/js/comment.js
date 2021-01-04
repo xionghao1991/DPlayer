@@ -80,17 +80,17 @@ class Comment {
             return;
         }
 
-        // this.player.danmaku.send(
-        //     {
-        //         text: this.player.template.commentInput.value,
-        //         color: utils.color2Number(this.player.container.querySelector('.dplayer-comment-setting-color input:checked').value),
-        //         type: parseInt(this.player.container.querySelector('.dplayer-comment-setting-type input:checked').value),
-        //     },
-        //     () => {
-        //         this.player.template.commentInput.value = '';
-        //         this.hide();
-        //     }
-        // );
+        this.player.danmaku.send(
+            {
+                text: this.player.template.commentInput.value,
+                color: utils.color2Number(this.player.container.querySelector('.dplayer-comment-setting-color input:checked').value),
+                type: parseInt(this.player.container.querySelector('.dplayer-comment-setting-type input:checked').value),
+            },
+            () => {
+                this.player.template.commentInput.value = '';
+                this.hide();
+            }
+        );
     }
 }
 
