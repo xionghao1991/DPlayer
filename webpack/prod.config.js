@@ -115,7 +115,7 @@ module.exports = {
             openAnalyzer: true,
         }),
         new MiniCssExtract({
-            filename: '[name].css',
+            filename: 'dplayer.css',
         }),
     ],
 

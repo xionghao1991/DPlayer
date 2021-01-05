@@ -6,7 +6,9 @@ import artTemplate from '../rollup-art-template/index';
 export default {
     input: 'src/js/index.js',
     plugins: [
-        image(),
+        image({
+            dom: true
+        }),
         babel(
             { babelHelpers: 'bundled' }
         ),
@@ -15,7 +17,7 @@ export default {
         commonjs() // so Rollup can convert `ms` to an ES module
     ],
     output: {
-        file: 'dist/DPlayer.esm.js',
+        file: 'esm/DPlayer.esm.js',
         format: 'esm',
     },
 };

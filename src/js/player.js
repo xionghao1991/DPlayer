@@ -1,4 +1,3 @@
-import Promise from 'promise-polyfill';
 
 import utils from './utils';
 import handleOption from './options';

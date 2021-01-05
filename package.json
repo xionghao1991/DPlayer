@@ -1,9 +1,9 @@
 {
-    "name": "@cnst/dplayer",
-    "version": "1.26.1",
+    "name": "@csnt/dplayer",
+    "version": "1.26.4",
     "description": "Wow, such a lovely HTML5 danmaku video player",
     "main": "dist/DPlayer.min.js",
-    "module": "dist/DPlayer.esm.js",
+    "module": "esm/DPlayer.esm.js",
     "scripts": {
         "build:esm": "rollup --config rollup/rollup.config.js",
         "start": "npm run dev",
@@ -19,7 +19,8 @@
     "types": "types/index.d.ts",
     "files": [
         "dist",
-        "types/index.d.ts"
+        "types/index.d.ts",
+        "esm"
     ],
     "repository": {
         "url": "git+https://github.com/DIYgod/DPlayer.git",
@@ -87,8 +88,6 @@
         "yorkie": "^2.0.0"
     },
     "dependencies": {
-        "axios": "0.21.0",
-        "balloon-css": "^1.0.3",
-        "promise-polyfill": "8.2.0"
+        "balloon-css": "^1.0.3"
     }
 }

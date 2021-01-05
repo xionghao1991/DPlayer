@@ -1,6 +1,20 @@
 <div class="dplayer-mask"></div>
 <div class="dplayer-video-wrap">
-    {{ include './video.art' video }}
+    {{ set enableSubtitle = video.subtitle && video.subtitle.type === 'webvtt' }}
+    <video
+        class="dplayer-video {{ if video.current }}dplayer-video-current{{ /if }}"
+        webkit-playsinline
+        {{ if video.airplay }} x-webkit-airplay="allow" {{ /if }}
+        playsinline
+        {{ if video.pic }}poster="{{ video.pic }}"{{ /if }}
+        {{ if video.screenshot || enableSubtitle }}crossorigin="anonymous"{{ /if }}
+        {{ if video.preload }}preload="{{ video.preload }}"{{ /if }}
+        {{ if video.url }}src="{{ video.url }}"{{ /if }}
+        >
+        {{ if enableSubtitle }}
+        <track kind="metadata" default src="{{ video.subtitle.url }}"></track>
+        {{ /if }}
+    </video>
     {{ if options.logo }}
     <div class="dplayer-logo">
         <img src="{{ options.logo }}">
