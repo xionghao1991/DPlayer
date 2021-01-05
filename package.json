@@ -1,6 +1,6 @@
 {
     "name": "@csnt/dplayer",
-    "version": "1.26.4",
+    "version": "1.26.5",
     "description": "Wow, such a lovely HTML5 danmaku video player",
     "main": "dist/DPlayer.min.js",
     "module": "esm/DPlayer.esm.js",
@@ -85,6 +85,7 @@
         "webpack": "^4.40.2",
         "webpack-cli": "3.3.12",
         "webpack-dev-server": "^3.8.1",
+        "rollup-plugin-define": "^1.0.1",
         "yorkie": "^2.0.0"
     },
     "dependencies": {
