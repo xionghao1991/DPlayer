@@ -9,3 +9,4 @@ wxw
 package-lock.json
 docs/.vuepress/dist
 dist
+esm
